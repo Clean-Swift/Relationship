@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ManagedCustomer" representedClassName="ManagedCustomer" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <relationship name="managedLicenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ManagedLicense" inverseName="managedCustomer" inverseEntity="ManagedLicense" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <entity name="ManagedLicense" representedClassName="ManagedLicense" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serial" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="managedCustomer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ManagedCustomer" inverseName="managedLicenses" inverseEntity="ManagedCustomer" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ManagedCustomer" positionX="261" positionY="189" width="128" height="90"/>
+        <element name="ManagedLicense" positionX="261" positionY="198" width="128" height="90"/>
+    </elements>
+</model>
